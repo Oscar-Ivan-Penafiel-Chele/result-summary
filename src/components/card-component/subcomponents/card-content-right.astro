@@ -1,0 +1,56 @@
+---
+import Summary from "../../../../assets/data/data.json";
+import SummaryItems from "./summary-item.astro";
+
+const summaryData = Summary;
+---
+
+<section>
+    <p class="title__summary__left">Summary</p>
+
+    <article>
+        {
+            summaryData.map((m) => (
+                <SummaryItems 
+                    icon = {m.icon}
+                    text = {m.category}
+                    score = {m.score}
+                    color = {m.color}
+                ></SummaryItems>
+            ))
+        }
+    </article>
+
+    <button class="button__summary">Continue</button>
+</section>
+
+<style>
+    section{
+        flex: 1;
+        padding: 2.5rem;
+    }
+
+    .title__summary__left{
+        font-size: 1.4em;
+        font-family: HankenGrotesk-bold;
+        color: var(--dark-gray-blue);
+        margin-bottom: 1.8rem;
+    }
+
+    .button__summary{
+        color: var(--white);
+        background-color: var(--dark-gray-blue);
+        font-family: HankenGrotesk-variable;
+        padding: 1rem 0rem;
+        border-radius: 10rem;
+        border: none;
+        width: 100%;
+        margin-top: 1.5rem;
+        font-size: 1.05rem;
+    }
+
+    .button__summary:hover{
+        cursor: pointer;
+        background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue ));
+    }
+</style>

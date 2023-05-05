@@ -1,0 +1,49 @@
+---
+interface Props{
+    icon: string
+    text: string 
+    score:number
+    color: string
+}
+
+const {icon, text, score, color} = Astro.props;
+---
+
+<div class="summary__item" style=`background-color: hsla(${color},8%)`>
+    <div class="summary__item__left">
+        <img src={icon} />
+        <p style=`color: hsl(${color}); font-family: HankenGrotesk-bold;`>{text}</p>
+    </div>
+
+    <p class="text__score">{score}<span> / 100</span></p>
+</div>
+
+<style>
+    .summary__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        padding: 1rem;
+        flex-flow: row nowrap;
+        border-radius: 12px;
+        margin: 1rem 0rem;
+        width: 100%;
+    }
+
+    .summary__item__left{
+        display: flex;
+        gap: .7rem;
+        font-size: 1.05rem;
+    }
+
+    .text__score{
+        color: var(--dark-gray-blue);
+        font-family: HankenGrotesk-extrabold;
+        font-size: 1.05rem;
+    }
+
+    .text__score > span{
+        color: var(--gray);
+        font-family: HankenGrotesk-bold;
+    }
+</style>

@@ -36,25 +36,25 @@ body{
 /* Fonts */
 @font-face {
     font-family: 'HankenGrotesk-bold';
-    src: url('../../assets/fonts/static/HankenGrotesk-Bold.ttf') format('woff');
+    src: url('../../fonts/static/HankenGrotesk-Bold.ttf') format('woff');
     font-display: swap;
 }
 
 @font-face {
     font-family: 'HankenGrotesk-extrabold';
-    src: url('../../assets/fonts/static/HankenGrotesk-ExtraBold.ttf') format('woff');
+    src: url('../../fonts/static/HankenGrotesk-ExtraBold.ttf') format('woff');
     font-display: swap;
 }
 
 @font-face {
     font-family: 'HankenGrotesk-medium';
-    src: url('../../assets/fonts/static/HankenGrotesk-Medium.ttf') format('woff');
+    src: url('../../fonts/static/HankenGrotesk-Medium.ttf') format('woff');
     font-display: swap;
 }
 
 @font-face {
     font-family: 'HankenGrotesk-variable';
-    src: url('../../assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('woff');
+    src: url('../../fonts/HankenGrotesk-VariableFont_wght.ttf') format('woff');
     font-display: swap;
 }
 
